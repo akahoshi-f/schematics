@@ -1,30 +1,19 @@
-variable "ibmcloud_api_key_p1nonpci" {}
-variable "proj_name" {}
-variable "region" {}
-variable "zone" {}
-variable "rg" {}
+variable "region" {
+  description = "regiao"
+  type = string
+}
 
-######################################################################
+variable "zone" {
+  description = "zona"
+  type = string
+}
 
-######################################################################
-# var lpar
-######################################################################
-variable "ssh" {}
-variable "subnet_cidr" {}
-variable "pi_memory" {}
-variable "pi_processors" {}
-variable "pi_proc_type" {}
-variable "pi_image_id" {}
-variable "pi_sys_type" {}
-variable "pi_pin_policy" {}
-variable "pi_ip_address" {}
+variable "ibmcloud_api_key_p1nonpci" {
+  description = "api"
+  type = string
+}
 
-######################################################################
-
-######################################################################
-# outputs externos
-######################################################################
-variable "tg_nonpci_id" {}
-variable "pvs_connection" {}
-
-######################################################################
+variable "skibidigroup" {
+  description = "nome do resource group"
+  type = string
+}
